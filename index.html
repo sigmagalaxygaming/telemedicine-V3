@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telemedicine Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div id="login-screen" class="screen">
+    <h1>Telemedicine Login</h1>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <!-- Dashboard Screen -->
+  <div id="dashboard-screen" class="screen" style="display: none;">
+    <h1>Welcome to Telemedicine Dashboard</h1>
+    <button onclick="startVideoCall()">Start Video Call</button>
+    <button onclick="viewMedicalDevice()">Check Medical Device</button>
+    <button onclick="viewHealthRecords()">Health Records</button>
+    <button onclick="bookAppointment()">Book Appointment</button>
+    <button onclick="viewDoctors()">View Doctors</button>  <!-- New button to view doctors -->
+  </div>
+
+  <!-- Doctors Screen -->
+  <div id="doctors-screen" class="screen" style="display: none;">
+    <h1>Available Doctors</h1>
+    <div id="doctor-list">
+      <!-- Doctor Cards will be dynamically inserted here -->
+    </div>
+    <button onclick="goBackToDashboard()">Back to Dashboard</button>
+  </div>
+
+  <!-- Video Call Screen -->
+  <div id="video-call-screen" class="screen" style="display: none;">
+    <h1>Connecting...</h1>
+    <p id="connecting-message"></p>
+  </div>
+
+  <!-- Health Records Screen -->
+  <div id="health-records-screen" class="screen" style="display: none;">
+    <h1>Health Records</h1>
+    <p>Previous Conditions: <input type="text" id="conditions"></p>
+    <p>Height (cm): <input type="number" id="height"></p>
+    <p>Weight (kg): <input type="number" id="weight"></p>
+    <button onclick="saveHealthRecords()">Save Records</button>
+    <button onclick="goBackToDashboard()">Back to Dashboard</button>
+  </div>
+
+  <!-- Appointment Booking Screen -->
+  <div id="appointment-screen" class="screen" style="display: none;">
+    <h1>Book an Appointment</h1>
+    <label for="date">Select Date:</label>
+    <input type="date" id="date">
+    <button onclick="confirmAppointment()">Confirm Appointment</button>
+    <button onclick="goBackToDashboard()">Back to Dashboard</button>
+  </div>
+
+  <!-- Medical Device Screen -->
+  <div id="medical-device-screen" class="screen" style="display: none;">
+    <h1>Medical Device Reading</h1>
+    <p id="device-reading">Heart Rate: 72 BPM (Simulated)</p>
+    <button onclick="goBackToDashboard()">Back to Dashboard</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
