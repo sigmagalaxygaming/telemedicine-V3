@@ -5,13 +5,13 @@ function login() {
   
     // Meme-themed credentials
     const memeUsername = "NPC";
-    const memePassword = "susImposter";
+    const memePassword = "Imposter";
   
     if (username === memeUsername && password === memePassword) {
       document.getElementById("login-screen").style.display = "none";
       document.getElementById("dashboard-screen").style.display = "flex";
     } else {
-      alert("Incorrect username or password. Try again with the latest meme references!");
+      alert("Incorrect username or password");
     }
   }
   
